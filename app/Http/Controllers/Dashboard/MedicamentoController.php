@@ -17,6 +17,8 @@ class MedicamentoController extends Controller
     public function index()
     {
         //
+        $medicamento=Medicamento::orderBy('created_at','asc') -> cursorpaginate(5);
+        echo view('dashboard.medicamento.index',['medicamento'=>$medicamento]);
     }
 
     /**
@@ -52,6 +54,7 @@ class MedicamentoController extends Controller
     public function show(Medicamento $medicamento)
     {
         //
+        echo view ('dashboard.medicamento.show', ["medicamento" =>$post]);
     }
 
     /**

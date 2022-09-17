@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreMedicamentoPost;
 use App\Models\Medicamento;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class MedicamentoController extends Controller
     public function create()
     {
         //
+        echo view ('dashboard.medicamento.create');
     }
 
     /**

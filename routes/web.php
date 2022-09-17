@@ -19,7 +19,7 @@ use App\Http\Controllers\Dashboard\UsuarioController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::resource('medicamento', MedicamentoController::class);
 

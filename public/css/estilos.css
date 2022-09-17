@@ -1,0 +1,31 @@
+*{
+    background-color:cadetblue;
+    
+}
+
+.titulo{
+    text-align: center;
+}
+
+.sub{
+    text-align: center;
+    
+}
+
+.fo{
+    width:100%;
+	height:auto;
+	border:none;
+	border-radius: none;
+	background-color:#EEEEEE;			
+	margin:8px 0;
+	display:block;
+    font-size: 15px;
+    padding:10px 10px;
+    resize: both;
+ 
+}
+
+#but{
+    float: right;
+}

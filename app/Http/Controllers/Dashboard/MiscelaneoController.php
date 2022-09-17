@@ -17,6 +17,8 @@ class MiscelaneoController extends Controller
     public function index()
     {
         //
+        $miscelaneo=Miscelaneo::orderBy('created_at','asc') -> cursorpaginate(5);
+        echo view('dashboard.miscelaneo.index',['miscelaneo'=>$miscelaneo]);
     }
 
     /**
@@ -40,7 +42,7 @@ class MiscelaneoController extends Controller
     {
         //
             Miscelaneo::create($request->validated());
-            return back()->with('status','Muchas gracia el miscelaneo ha sido creado exitosamente');
+            return back()->with('status','Muchas gracias, Miscelaneo creado exitosamente');
     }
 
     /**
@@ -52,6 +54,7 @@ class MiscelaneoController extends Controller
     public function show(Miscelaneo $miscelaneo)
     {
         //
+        echo view ('dashboard.miscelaneo.show', ["miscelaneo" =>$miscelaneo]);
     }
 
     /**

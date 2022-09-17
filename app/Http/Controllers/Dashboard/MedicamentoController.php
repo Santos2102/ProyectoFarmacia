@@ -42,7 +42,7 @@ class MedicamentoController extends Controller
     {
         //
             Medicamento::create($request->validated());
-            return back()->with('status','Muchas gracia el medicamento ha sido creado exitosamente');
+            return back()->with('status','Muchas gracias, Medicamento creado exitosamente');
     }
 
     /**

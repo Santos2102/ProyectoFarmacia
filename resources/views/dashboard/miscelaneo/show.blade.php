@@ -21,54 +21,54 @@
 
 
     @include('dashboard.partials.nav-header-main')
-    <h1 class="titulo">Medicamentos</h1>
+    <h1 class="titulo">Miscelaneos</h1>
     <br> <br>
 
    
     
-    <form action="{{route('medicamento.store')}}" method="post">
+    <form action="{{route('miscelaneo.store')}}" method="post">
     @csrf
+      
+
         <div class="row">
 
             <div class="col">
                 <label class="sub" ><b>Nombre:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Medicamento" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value="{{$medicamento->nombre}}" readonly> <br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Medicamento" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value ="{{$miscelaneo->nombre}}"> <br>
                  @error('nombre')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
 
                 <label for=""><b>Descripción:</b></label>
-                <textarea readonly class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Descripción" aria-label="Disabled input example"  rows="3" name="descripcion">{{$medicamento->descripcion}}"</textarea><br>
+                <textarea class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Descripción" aria-label="Disabled input example"  rows="3" name="descripcion">{{$miscelaneo->descripcion}}</textarea><br>
                 @error('descripcion')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
-                <label class="sub" ><b>Laboratorio:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Laboratorio" aria-label="Disabled input example"  rows="1" type="text" name="laboratorio" value="{{$medicamento->laboratorio}}" readonly><br>
-                @error('laboratorio')
+                <label class="sub" ><b>Tipo:</b></label><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Tipo" aria-label="Disabled input example"  rows="1" type="text" name="tipo" value ="{{$miscelaneo->tipo}}"><br>
+                @error('tipo')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
-                <label class="sub" ><b>Presentación:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese tipo de presentación" aria-label="Disabled input example"  rows="1" type="text" name="presentacion" value="{{$medicamento->presentacion}}" readonly><br>
-                @error('presentacion')
+                <label class="sub" ><b>Marca:</b></label><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese tipo de Marca" aria-label="Disabled input example"  rows="1" type="text" name="marca" value ="{{$miscelaneo->marca}}"><br>
+                @error('marca')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
-                <label class="sub" ><b>Precio Unidad:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio por unidad " aria-label="Disabled input example"  rows="1" type="text" name="precio_unidad" value="{{$medicamento->precio_unidad}}" readonly><br>
-                @error('precio_unidad')
+                <label class="sub" ><b>Precio:</b></label><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio" aria-label="Disabled input example"  rows="1" type="text" name="precio" value ="{{$miscelaneo->precio}}"><br>
+                @error('precio')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 
 
                 <label class="sub" ><b>Imagen:</b></label><br>
-                <input readonly type="file" name="imagen" value="{{$medicamento->imagen}}"><br>
+                <input type="file" name="imagen" value ="{{$miscelaneo->imagen}}"><br>
                 @error('imagen')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 
 
-
-              
             </div>
 
         </div>

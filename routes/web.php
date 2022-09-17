@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Dashboard\MedicamentoController;
+use App\Http\Controllers\Dashboard\MiscelaneoController;
+use App\Http\Controllers\Dashboard\UsuarioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('medicamento', MedicamentoController::class);
+
+Route::resource('miscelaneo', MiscelaneoController::class);
+
+Route::resource('usuario', UsuarioController::class);

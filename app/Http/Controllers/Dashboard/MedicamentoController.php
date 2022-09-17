@@ -54,7 +54,7 @@ class MedicamentoController extends Controller
     public function show(Medicamento $medicamento)
     {
         //
-        echo view ('dashboard.medicamento.show', ["medicamento" =>$post]);
+        echo view ('dashboard.medicamento.show', ["medicamento" =>$medicamento]);
     }
 
     /**

@@ -58,46 +58,45 @@
                         </tr>
                     </tbody>
 
-                    @foreach($medicamento as $post)
+                    @foreach($medicamento as $medicamento)
                         <tr>
                             <td>
-                                {{$post->id}}
+                                {{$medicamento->id}}
                             </td>
                             <td>
-                                {{$post->nombre}}
+                                {{$medicamento->nombre}}
                             </td>
                             <td>
-                                {{$post->descripcion}}
+                                {{$medicamento->descripcion}}
                             </td>
                             <td>
-                                {{$post->laboratorio}}
+                                {{$medicamento->laboratorio}}
                             </td>
                             <td>
-                                {{$post->presentacion}}
+                                {{$medicamento->presentacion}}
                             </td>
                             <td>
-                                {{$post->precio_unidad}}
+                                {{$medicamento->precio_unidad}}
                             </td>
                             <td>
-                                {{$post->imagen}}
+                                {{$medicamento->imagen}}
                             </td>
                             <td>
-                                {{$post->created_at->format('d-m-Y')}}
+                                {{$medicamento->created_at->format('d-m-Y')}}
                             </td>
                             <td>
-                                {{$post->updated_at->format('d-m-Y')}}
+                                {{$medicamento->updated_at->format('d-m-Y')}}
                             </td>
 
                             <td>
 
-                                <a href="{{route('medicamento.show',$post->id)}}" class="btn btn-primary">Ver</a>
+                                <a href="{{route('medicamento.show',$medicamento->id)}}" class="btn btn-primary">Ver</a>
                             </td>
 
                         </tr>
                     @endforeach
                 </thead>                
-            </table>  
-            {{$posts->links()}}        
+            </table>       
         </div>
     </main>
 </body>

@@ -27,42 +27,42 @@
    
     
     <form action="{{route('medicamento.store')}}" method="post">
-        
+    @csrf
         <div class="row">
 
             <div class="col">
                 <label class="sub" ><b>Nombre:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Medicamento" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value ="{{old('nombre')}}" readonly> <br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Medicamento" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value="{{$medicamento->nombre}}" readonly> <br>
                  @error('nombre')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
 
                 <label for=""><b>Descripción:</b></label>
-                <textarea readonly class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Descripción" aria-label="Disabled input example"  rows="3" name="descripcion">{{old('descripcion')}}</textarea><br>
+                <textarea readonly class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Descripción" aria-label="Disabled input example"  rows="3" name="descripcion">{{$medicamento->descripcion}}"</textarea><br>
                 @error('descripcion')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
                 <label class="sub" ><b>Laboratorio:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Laboratorio" aria-label="Disabled input example"  rows="1" type="text" name="laboratorio" value ="{{old('laboratorio')}}" readonly><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Laboratorio" aria-label="Disabled input example"  rows="1" type="text" name="laboratorio" value="{{$medicamento->laboratorio}}" readonly><br>
                 @error('laboratorio')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
                 <label class="sub" ><b>Presentación:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese tipo de presentación" aria-label="Disabled input example"  rows="1" type="text" name="presentacion" value ="{{old('presentacion')}}" readonly><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese tipo de presentación" aria-label="Disabled input example"  rows="1" type="text" name="presentacion" value="{{$medicamento->presentacion}}" readonly><br>
                 @error('presentacion')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
                 
                 <label class="sub" ><b>Precio Unidad:</b></label><br>
-                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio por unidad " aria-label="Disabled input example"  rows="1" type="text" name="precio_unidad" value ="{{old('precio_unidad')}}" readonly><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio por unidad " aria-label="Disabled input example"  rows="1" type="text" name="precio_unidad" value="{{$medicamento->precio_unidad}}" readonly><br>
                 @error('precio_unidad')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 
 
                 <label class="sub" ><b>Imagen:</b></label><br>
-                <input readonly type="file" name="imagen" value ="{{old('imagen')}}"><br>
+                <input readonly type="file" name="imagen" value="{{$medicamento->imagen}}"><br>
                 @error('imagen')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 

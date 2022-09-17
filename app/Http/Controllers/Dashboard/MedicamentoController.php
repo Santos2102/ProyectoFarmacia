@@ -36,9 +36,11 @@ class MedicamentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMedicamentoPost $request)
     {
         //
+            Medicamento::create($request->validated());
+            return back()->with('status','Muchas gracia el medicamento ha sido creado exitosamente');
     }
 
     /**

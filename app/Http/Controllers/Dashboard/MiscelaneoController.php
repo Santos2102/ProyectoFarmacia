@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreMiscelaneoPost;
 use App\Models\Miscelaneo;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class MiscelaneoController extends Controller
     public function create()
     {
         //
+        echo view ('dashboard.miscelaneo.create');
     }
 
     /**
@@ -34,9 +36,11 @@ class MiscelaneoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMiscelaneoPost $request)
     {
         //
+            Miscelaneo::create($request->validated());
+            return back()->with('status','Muchas gracia el miscelaneo ha sido creado exitosamente');
     }
 
     /**

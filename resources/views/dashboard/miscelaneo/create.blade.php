@@ -26,7 +26,7 @@
 
    
     
-    <form >
+    <form action="{{route('miscelaneo.store')}}" method="post">
         @include('dashboard.partials.sesion-flash-status')
       
 

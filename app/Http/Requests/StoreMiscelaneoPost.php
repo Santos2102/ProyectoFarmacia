@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreMedicamentoPost extends FormRequest
+class StoreMiscelaneoPost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,13 @@ class StoreMedicamentoPost extends FormRequest
     public function rules()
     {
         return [
+            //
             'nombre'=>'required|min:5|Max:500',
             'descripcion'=>'required|min:5|Max:500',
-            'laboratorio'=>'required|min:5|Max:500',
-            'presentacion'=>'required|min:5|Max:500',
-            'precio_unidad'=>'required',
+            'tipo'=>'required|min:5|Max:500',
+            'marca'=>'required|min:5|Max:500',
+            'precio'=>'required',
             'imagen'=>'required|min:5|Max:500',
-            //
         ];
     }
 }

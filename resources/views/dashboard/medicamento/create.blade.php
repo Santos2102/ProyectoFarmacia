@@ -26,10 +26,8 @@
 
    
     
-    <form >
+    <form action="{{route('medicamento.store')}}" method="post">
         @include('dashboard.partials.sesion-flash-status')
-      
-
         <div class="row">
 
             <div class="col">

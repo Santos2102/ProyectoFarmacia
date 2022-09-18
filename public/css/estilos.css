@@ -28,7 +28,7 @@
 	background-color:aliceblue;
     
     color: aliceblue;
-    
+
 	margin:8px 0;
 	/* display:block; */
     display: flex;
@@ -42,7 +42,7 @@
 }
 
 #but{
-    float: right;
+    float: left;
 }
 
 .ima{

@@ -1,5 +1,4 @@
 /* *{
-   background-color:cadetblue;
    background-image: url("/Assets/Image/fondo.jpg");
    background-attachment: fixed;
     
@@ -26,7 +25,10 @@
 	height:auto;
 	border:none;
 	border-radius: none;
-	background-color:aliceblue;			
+	background-color:aliceblue;
+    
+    color: aliceblue;
+    
 	margin:8px 0;
 	/* display:block; */
     display: flex;
@@ -47,5 +49,3 @@
     display:block;
     margin:auto;
 }
-
-/* solo para probar !!! */

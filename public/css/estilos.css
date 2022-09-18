@@ -1,5 +1,7 @@
 *{
-    background-color:cadetblue;
+   /*  background-color:cadetblue; */
+   background-image: url("/Assets/Image/fondo.jpg");
+   background-attachment: fixed;
     
 }
 
@@ -13,7 +15,7 @@
 }
 
 .fo{
-    width:100%;
+    width:70%;
 	height:auto;
 	border:none;
 	border-radius: none;
@@ -28,4 +30,9 @@
 
 #but{
     float: right;
+}
+
+.ima{
+    display:block;
+    margin:auto;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fondo">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,12 +19,18 @@
 
     <title>FarmaSalud</title>
 </head>
+<<<<<<< HEAD
 <body >
+=======
+<body class="fondo">
+
+
+>>>>>>> 9ee2139f5d8d47af9a59a201133cec459608fcc9
     @include('dashboard.partials.nav-header-main')
     <h1 class="titulo">Ingreso de Medicamentos</h1>
     <br> <br>
 
-    <img class="ima" src="/Assets/Image/logo.png" alt="" width="30%">
+    <img class="ima" src="/Assets/Image/logo.png" alt="" width="25%">
    
     
     <form action="{{route('medicamento.store')}}" method="post">

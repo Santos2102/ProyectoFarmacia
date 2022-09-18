@@ -19,9 +19,7 @@
 
     <title>FarmaSalud</title>
 </head>
-<body>
-
-
+<body >
     @include('dashboard.partials.nav-header-main')
     <h1 class="titulo">Ingreso de Medicamentos</h1>
     <br> <br>

@@ -26,3 +26,7 @@ Route::resource('medicamento', MedicamentoController::class);
 Route::resource('miscelaneo', MiscelaneoController::class);
 
 Route::resource('usuario', UsuarioController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

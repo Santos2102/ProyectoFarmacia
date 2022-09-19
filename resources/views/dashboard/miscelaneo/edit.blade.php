@@ -27,8 +27,10 @@
     <img class="ima" src="/Assets/Image/logo.png" alt="" width="25%">
    
     
-    <form action="{{route('miscelaneo.store')}}" method="post">
-       @include('dashboard.miscelaneo._form')
+    <form action="{{route('miscelaneo.update',$miscelaneo->id)}}" method="post">
+        @method('PUT')
+        @include('dashboard.miscelaneo._form')
+
 
     </form>    
       

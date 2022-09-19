@@ -29,7 +29,7 @@ class MiscelaneoController extends Controller
     public function create()
     {
         //
-        echo view ('dashboard.miscelaneo.create');
+        echo view ('dashboard.miscelaneo.create',["miscelaneo"=>new miscelaneo()]);
     }
 
     /**
@@ -66,6 +66,7 @@ class MiscelaneoController extends Controller
     public function edit(Miscelaneo $miscelaneo)
     {
         //
+        echo view ('dashboard.miscelaneo.edit', ["miscelaneo" =>$miscelaneo]);
     }
 
     /**
@@ -78,6 +79,8 @@ class MiscelaneoController extends Controller
     public function update(Request $request, Miscelaneo $miscelaneo)
     {
         //
+        $miscelaneo->update($request->validated());
+        return back()->with('status', 'Gracias, Miscelaneo actualizado exitosamente');
     }
 
     /**
@@ -89,5 +92,7 @@ class MiscelaneoController extends Controller
     public function destroy(Miscelaneo $miscelaneo)
     {
         //
+        $miscelaneo->delete();
+        return back()->with('status','Gracias, Miscelaneo borrado exitosamente');
     }
 }

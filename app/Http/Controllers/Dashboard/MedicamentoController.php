@@ -29,7 +29,7 @@ class MedicamentoController extends Controller
     public function create()
     {
         //
-        echo view ('dashboard.medicamento.create');
+        echo view ('dashboard.medicamento.create',["medicamento"=> new medicamento()]);
     }
 
     /**
@@ -66,6 +66,7 @@ class MedicamentoController extends Controller
     public function edit(Medicamento $medicamento)
     {
         //
+        echo view ('dashboard.medicamento.edit',["medicamento"=>$medicamento]);
     }
 
     /**
@@ -75,9 +76,11 @@ class MedicamentoController extends Controller
      * @param  \App\Models\Medicamento  $medicamento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Medicamento $medicamento)
+    public function update(StoreMedicamentoPost $request, Medicamento $medicamento)
     {
         //
+        $medicamento->update($request->validated());
+        return back()->with('status', 'Gracias, Medicamento actualizado exitosamente');
     }
 
     /**
@@ -89,5 +92,7 @@ class MedicamentoController extends Controller
     public function destroy(Medicamento $medicamento)
     {
         //
+        $medicamento->delete();
+        return back()->with('status','Gracias, Medicamento borrado exitosamente');
     }
 }

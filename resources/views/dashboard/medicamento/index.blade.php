@@ -13,7 +13,7 @@
 
     <title>FarmaSalud</title>
 </head>
-<body class="fondo">
+<body style="background-image: url('/Assets/Image/fondo.jpg');background-attachment: fixed;">
     <header >
         @include('dashboard.partials.nav-header-main')
         <a class="btn btn-primary" href="{{route('medicamento.create')}}">Crear</a>
@@ -21,7 +21,7 @@
 
     <main>
         <div class="container">
-            <table class="table table-striped">
+            <table class="table table-striped" style="background-color: white;">
                 <thead>
                 <tbody>
                         <tr>
@@ -89,8 +89,13 @@
                             </td>
 
                             <td>
-
                                 <a href="{{route('medicamento.show',$medicamento->id)}}" class="btn btn-primary">Ver</a>
+                                <a href="{{route('medicamento.edit',$medicamento->id)}}" class="btn btn-primary">Editar</a>
+                                <form method="post" action="{{route('medicamento.destroy',$medicamento->id)}}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                </form>
                             </td>
 
                         </tr>

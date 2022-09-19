@@ -27,7 +27,7 @@
 	border-radius: none;
 	background-color:aliceblue;
     
-    color: aliceblue;
+    color: black;
 
 	margin:8px 0;
 	/* display:block; */
@@ -62,10 +62,11 @@
 }
 
 .car{
-    width: 600px;
-    height: 450px;
+    width: 150;/* 
+    height: 450px; */
 }
 
 .tar{
-    float:right
+    float:right;
+    
 }

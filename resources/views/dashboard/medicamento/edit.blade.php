@@ -33,7 +33,8 @@
 
     <main>
         <div class="container">
-            <form action="{{route('medicamento.store')}}" method="post">
+            <form action="{{route('medicamento.update',$medicamento->id)}}" method="post">
+                @method('PUT')
                 @include('dashboard.medicamento._form')
             </form>   
         </div>

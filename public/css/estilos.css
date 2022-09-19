@@ -60,3 +60,12 @@
     background-color: aliceblue;
     text-align: center;
 }
+
+.car{
+    width: 600px;
+    height: 450px;
+}
+
+.tar{
+    float:right
+}

@@ -55,6 +55,49 @@
 
     <p class="parrafo"> En FarmaSalud encontrarás todo lo que necesitas para mantenerte sano y activo, siempre preocpandonos por ti y por los tuyos</p>
 
+    <container>
+
+    <div class="row">
+
+            <div class="col">
+                <div class="card tar" style="width: 32rem; height:42rem;">
+                    <img src="/Assets/Image/mision.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Misión:</h4>
+                      <p class="card-text">Ofrecer una asistencia sanitaria de calidad, para alcanzar y mantener la salud, ofreciendo servicios farmacéuticos y productos, de forma profesional, servicial y cercana.</p>
+                    
+                    </div>
+                  </div>
+
+            </div>
+            <div class="col">
+                <div class="card center-block" style="width: 32rem; height:42rem;">
+                    <img  class="tarim tit" src="/Assets/Image/vision.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Visión:</h4>
+                      <p class="card-text">Con respecto a nuestros usuarios: facilitar un rápido acceso a los productos que precisen, primando los servicios profesionales, para que saquen el máximo beneficio a sus medicamentos.</p>
+                    
+                    </div>
+                  </div>
+                
+            </div>
+            <div class="col">
+                <div class="card " style="width: 32rem; height:42rem;">
+                    <img class="tarim tit" src="/Assets/Image/valores.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Valores:</h4>
+                      <p class="card-text"> Compromiso, responsabilidad, seguridad, Humanidad, honestidad, respeto, Calidad, resolución, eficiencia, Profesionalidad</p>
+                    
+                    </div>
+                  </div>
+                
+            </div>
+
+        </div>
+
+
+    </container>
+
 
 </main>
 <footer class="footer">

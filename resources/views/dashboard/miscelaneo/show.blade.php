@@ -17,7 +17,7 @@
 
     <title>FarmaSalud</title>
 </head>
-<body>
+<body class="fondo>
 
 
     @include('dashboard.partials.nav-header-main')

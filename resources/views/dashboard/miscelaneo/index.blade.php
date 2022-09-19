@@ -13,7 +13,7 @@
 
     <title>FarmaSalud</title>
 </head>
-<body>
+<body class="fondo">
     <header >
         @include('dashboard.partials.nav-header-main')
         <a class="btn btn-primary" href="{{route('miscelaneo.create')}}">Crear</a>
@@ -79,7 +79,7 @@
                                 {{$miscelaneo->precio}}
                             </td>
                             <td>
-                                {{$miscelaneo->imagen}}
+                            <img src="Assets/Image/{{$miscelaneo->imagen}}" width="150">
                             </td>
                             <td>
                                 {{$miscelaneo->created_at->format('d-m-Y')}}

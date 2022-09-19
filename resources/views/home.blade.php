@@ -28,8 +28,7 @@
 </header>
 
 <main>
-    @extends('layouts.app')
-
+   
     @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -58,6 +57,9 @@
 
 
 </main>
+<footer class="footer">
+    <h3>Derechos Reservados Miguel Santos y Douglas Puac 2022</h3>
+</footer>
     
 </body>
 </html>

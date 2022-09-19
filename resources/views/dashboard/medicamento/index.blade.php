@@ -13,7 +13,7 @@
 
     <title>FarmaSalud</title>
 </head>
-<body>
+<body class="fondo">
     <header >
         @include('dashboard.partials.nav-header-main')
         <a class="btn btn-primary" href="{{route('medicamento.create')}}">Crear</a>
@@ -79,7 +79,7 @@
                                 {{$medicamento->precio_unidad}}
                             </td>
                             <td>
-                                {{$medicamento->imagen}}
+                                <img src="Assets/Image/{{$medicamento->imagen}}" width="150">
                             </td>
                             <td>
                                 {{$medicamento->created_at->format('d-m-Y')}}

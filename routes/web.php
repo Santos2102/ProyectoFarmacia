@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Dashboard\MedicamentoController;
 use App\Http\Controllers\Dashboard\MiscelaneoController;
+use App\Http\Controllers\Dashboard\ClienteMediController;
+use App\Http\Controllers\Dashboard\ClienteMisceController;
 use App\Http\Controllers\Dashboard\UsuarioController;
 
 /*
@@ -19,13 +21,13 @@ use App\Http\Controllers\Dashboard\UsuarioController;
 
 Route::get('/', function () {
 
-    $user=Auth::user();
+    /* $user=Auth::user();
 
     if($user->esAdmin()){
         echo "Eres admin";
     }else{
         echo "Eres cliente";
-    }
+    } */
 
     /*Aqui es donde se retornan las vistas para el administrador y los clientes*/
 
@@ -37,6 +39,8 @@ Route::resource('medicamento', MedicamentoController::class);
 Route::resource('miscelaneo', MiscelaneoController::class);
 
 Route::resource('usuario', UsuarioController::class);
+Route::resource('climedi', ClienteMediController::class);
+Route::resource('climisce', ClienteMisceController::class);
 
 Auth::routes();
 

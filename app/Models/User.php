@@ -48,17 +48,10 @@ class User extends Authenticatable
 
     public function esAdmin(){
 
-        if(\Auth::check()){
-            $user = new esAdmin();
-            if($this->role->nombre_rol=='Administrador'){
-                return true;
-            }else{
-                return false;
-            }
-            
-        } else {
-            // not logged in - do something
-        }
         
+        if($this->role->nombre_rol=='Administrador'){
+            return true;
+        }
+        return false;
     }
 }

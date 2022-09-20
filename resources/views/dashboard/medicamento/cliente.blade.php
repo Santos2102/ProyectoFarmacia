@@ -51,39 +51,7 @@
                         </tr>
                     </tbody>
 
-                    @foreach($medicamento as $medicamento)
-                        <tr>
-                         
-                            <td>
-                                {{$medicamento->nombre}}
-                            </td>
-                            <td>
-                                {{$medicamento->descripcion}}
-                            </td>
-                            <td>
-                                {{$medicamento->laboratorio}}
-                            </td>
-                            <td>
-                                {{$medicamento->presentacion}}
-                            </td>
-                            <td>
-                                {{$medicamento->precio_unidad}}
-                            </td>
-                            <td>
-                                {{$medicamento->Existencia}}
-                            </td>
-                            <td>
-                                <img src="Assets/Image/{{$medicamento->imagen}}" width="150">
-                            </td>
-                            
-                            <td>
-                                <a href="{{route('medicamento.show',$medicamento->id)}}" class="btn btn-success">Ordenar</a>
-                              
-                              
-                            </td>
-
-                        </tr>
-                    @endforeach
+                    
                 </thead>                
             </table>       
         </div>

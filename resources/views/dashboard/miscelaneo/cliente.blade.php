@@ -51,41 +51,7 @@
                         </tr>
                     </tbody>
 
-                    @foreach($miscelaneo as $miscelaneo)
-                        <tr>
-                            
-                            <td>
-                                {{$miscelaneo->nombre}}
-                            </td>
-                            <td>
-                                {{$miscelaneo->descripcion}}
-                            </td>
-                            <td>
-                                {{$miscelaneo->tipo}}
-                            </td>
-                            <td>
-                                {{$miscelaneo->marca}}
-                            </td>
-                            <td>
-                                {{$miscelaneo->precio}}
-                            </td>
-                            <td>
-                                {{$miscelaneo->Existencia}}
-                            </td>
-                            <td>
-                            <img src="Assets/Image/{{$miscelaneo->imagen}}" width="150">
-                            </td>
-                           
-
-                            <td>
-
-                                <a href="{{route('miscelaneo.show',$miscelaneo->id)}}" class="btn btn-success">Ordenar</a>
-                               
-                               
-                            </td>
-
-                        </tr>
-                    @endforeach
+                    
                 </thead>                
             </table>       
         </div>

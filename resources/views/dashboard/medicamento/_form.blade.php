@@ -39,6 +39,14 @@
                             <small class="text-danger">{{$message}}</small>
                         @enderror 
                     </div> 
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <label class="sub" ><b>Existencia:</b></label><br>
+                        <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Existencia " aria-label="Disabled input example"  rows="1" type="text" name="Existencia" value ="{{old('Existencia',$medicamento->Existencia)}}"><br>
+                        @error('precio_unidad')
+                            <small class="text-danger">{{$message}}</small>
+                        @enderror 
+                    </div> 
                         
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <label class="sub" ><b>Imagen:</b></label><br>

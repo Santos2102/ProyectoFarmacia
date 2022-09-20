@@ -30,6 +30,7 @@ class StoreMiscelaneoPost extends FormRequest
             'tipo'=>'required|min:5|Max:500',
             'marca'=>'required|min:5|Max:500',
             'precio'=>'required',
+            'Existencia'=>'required',
             'imagen'=>'required|min:5|Max:500',
         ];
     }

@@ -60,6 +60,12 @@
                 <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio por unidad " aria-label="Disabled input example"  rows="1" type="text" name="precio_unidad" value="{{$medicamento->precio_unidad}}" readonly><br>
                 @error('precio_unidad')
                     <small class="text-danger">{{$message}}</small>
+                @enderror
+                
+                <label class="sub" ><b>Existencia:</b></label><br>
+                <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio por unidad " aria-label="Disabled input example"  rows="1" type="text" name="Existencia" value="{{$medicamento->Existencia}}" readonly><br>
+                @error('Existencia')
+                    <small class="text-danger">{{$message}}</small>
                 @enderror 
 
                 <label class="sub" ><b>Imagen:</b></label><br>

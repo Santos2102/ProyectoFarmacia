@@ -44,6 +44,9 @@
                                 Precio Unidad
                             </td>
                             <td>
+                                Existencia
+                            </td>
+                            <td>
                                 Imagen
                             </td>
                             <td>
@@ -79,6 +82,9 @@
                                 {{$medicamento->precio_unidad}}
                             </td>
                             <td>
+                                {{$medicamento->Existencia}}
+                            </td>
+                            <td>
                                 <img src="Assets/Image/{{$medicamento->imagen}}" width="150">
                             </td>
                             <td>
@@ -89,8 +95,8 @@
                             </td>
 
                             <td>
-                                <a href="{{route('medicamento.show',$medicamento->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="{{route('medicamento.edit',$medicamento->id)}}" class="btn btn-primary">Editar</a>
+                                <a href="{{route('medicamento.show',$medicamento->id)}}" class="btn btn-success">Ver</a>
+                                <a href="{{route('medicamento.edit',$medicamento->id)}}" class="btn btn-warning">Editar</a>
                                 <form method="post" action="{{route('medicamento.destroy',$medicamento->id)}}">
                                     @method('DELETE')
                                     @csrf

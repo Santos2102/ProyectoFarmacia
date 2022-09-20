@@ -18,19 +18,23 @@
     <title>FarmaSalud</title>
 </head>
 <body class="fondo">
-
-
+    <header>
     @include('dashboard.partials.nav-header-main')
+
+
     <h1 class="titulo">Ingreso de Miscelaneos</h1>
     <br> <br>
 
     <img class="ima" src="/Assets/Image/logo.png" alt="" width="25%">
-   
-    
-    <form action="{{route('miscelaneo.store')}}" method="post">
-       @include('dashboard.miscelaneo._form')
+    </header>
 
-    </form>    
-      
+    <main>
+        <div class="container">
+            <form action="{{route('miscelaneo.store')}}" method="post">
+                @include('dashboard.miscelaneo._form')
+            </form>   
+        </div>
+    </main>
+    
 </body>
 </html>

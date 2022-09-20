@@ -44,6 +44,9 @@
                                 Precio
                             </td>
                             <td>
+                                Existencia
+                            </td>
+                            <td>
                                 Imagen
                             </td>
                             <td>
@@ -79,6 +82,9 @@
                                 {{$miscelaneo->precio}}
                             </td>
                             <td>
+                                {{$miscelaneo->Existencia}}
+                            </td>
+                            <td>
                             <img src="Assets/Image/{{$miscelaneo->imagen}}" width="150">
                             </td>
                             <td>
@@ -90,8 +96,8 @@
 
                             <td>
 
-                                <a href="{{route('miscelaneo.show',$miscelaneo->id)}}" class="btn btn-primary">Ver</a>
-                                <a href="{{route('miscelaneo.edit',$miscelaneo->id)}}" class="btn btn-primary">Editar</a>
+                                <a href="{{route('miscelaneo.show',$miscelaneo->id)}}" class="btn btn-success">Ver</a>
+                                <a href="{{route('miscelaneo.edit',$miscelaneo->id)}}" class="btn btn-warning">Editar</a>
                                 <form method="post" action="{{route('miscelaneo.destroy',$miscelaneo->id)}}">
                                     @method('DELETE')
                                     @csrf

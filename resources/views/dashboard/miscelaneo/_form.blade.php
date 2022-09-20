@@ -5,7 +5,7 @@
 
           <div class="col">
               <label class="sub" ><b>Nombre:</b></label><br>
-              <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Medicamento" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value ="{{old('nombre', $miscelaneo->nombre)}}"> <br>
+              <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Nombre de Miscelaneo" aria-label="Disabled input example"  rows="1" type="text" name="nombre" value ="{{old('nombre', $miscelaneo->nombre)}}"> <br>
                @error('nombre')
                   <small class="text-danger">{{$message}}</small>
               @enderror
@@ -30,6 +30,12 @@
               
               <label class="sub" ><b>Precio:</b></label><br>
               <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Precio" aria-label="Disabled input example"  rows="1" type="text" name="precio" value ="{{old('precio',$miscelaneo->precio)}}"><br>
+              @error('precio')
+                  <small class="text-danger">{{$message}}</small>
+              @enderror 
+
+              <label class="sub" ><b>Existencia:</b></label><br>
+              <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Existencia" aria-label="Disabled input example"  rows="1" type="text" name="Existencia" value ="{{old('Existencia',$miscelaneo->Existencia)}}"><br>
               @error('precio')
                   <small class="text-danger">{{$message}}</small>
               @enderror 

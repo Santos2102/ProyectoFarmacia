@@ -29,6 +29,7 @@ class StoreMedicamentoPost extends FormRequest
             'laboratorio'=>'required|min:5|Max:500',
             'presentacion'=>'required|min:5|Max:500',
             'precio_unidad'=>'required',
+            'Existencia'=>'required',
             'imagen'=>'required|min:5|Max:500',
             //
         ];

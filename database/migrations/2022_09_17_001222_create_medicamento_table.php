@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("laboratorio",255);
             $table->string("presentacion",255);
             $table->float("precio_unidad");
+            $table->integer("Existencia");
             $table->string("imagen");
             $table->timestamps();
         });

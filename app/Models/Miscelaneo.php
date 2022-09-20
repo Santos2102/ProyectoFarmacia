@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Miscelaneo extends Model
 {
     use HasFactory;
-    protected $fillable=['nombre','descripcion','tipo','marca','precio','imagen'];
+    protected $fillable=['nombre','descripcion','tipo','marca','precio','Existencia','imagen'];
 }

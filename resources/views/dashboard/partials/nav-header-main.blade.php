@@ -15,6 +15,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href={{route('medicamento.index')}}>Medicamentos</a></li>
               <li><a class="dropdown-item" href={{route('miscelaneo.index')}}>Miscelaneos</a></li>
+              <li><a class="dropdown-item" href={{route('medicamento.cliente')}}>Cliente - Medicamentos</a></li>
+              <li><a class="dropdown-item" href={{route('miscelaneo.cliente')}}>Cliente - Miscelaneos</a></li>
             </ul>
            </li>
        

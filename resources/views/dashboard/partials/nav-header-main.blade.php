@@ -16,36 +16,36 @@
               <li><a class="dropdown-item" href={{route('medicamento.index')}}>Medicamentos</a></li>
               <li><a class="dropdown-item" href={{route('miscelaneo.index')}}>Miscelaneos</a></li>
             </ul>
-          </li>
+           </li>
        
-        </ul>
-       <ul class="navbar-nav">
-       @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+         </ul>
+        <ul class="navbar-nav">
+        @guest
+            @if (Route::has('login'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+            @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+            @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+            @endif
+            @else
+            <li>
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+        @endguest
     
         </li>
   

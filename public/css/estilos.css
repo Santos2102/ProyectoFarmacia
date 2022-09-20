@@ -52,8 +52,8 @@
 
 .parrafo{
     text-align: center;
-    background-color:aliceblue;
-
+    color:aliceblue;
+    font-size: 1.5em;
 }
 
 .footer{

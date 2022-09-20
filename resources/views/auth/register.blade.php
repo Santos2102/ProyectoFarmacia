@@ -1,6 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('/Assets/Image/fondo.jpg');background-attachment: fixed;>
 @extends('layouts.app')
 
 @section('content')
+
+<div class="container">
+    <section class="row" style="text-align: center;">
+       <div>
+            <img src="/Assets/Image/registro.png" width="15%">
+        </div>
+    </section>
+</div> 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -75,3 +93,6 @@
     </div>
 </div>
 @endsection
+
+</body>
+</html>

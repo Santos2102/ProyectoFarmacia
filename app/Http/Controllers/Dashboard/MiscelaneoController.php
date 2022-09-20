@@ -76,7 +76,7 @@ class MiscelaneoController extends Controller
      * @param  \App\Models\Miscelaneo  $miscelaneo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Miscelaneo $miscelaneo)
+    public function update(StoreMiscelaneoPost $request, Miscelaneo $miscelaneo)
     {
         //
         $miscelaneo->update($request->validated());

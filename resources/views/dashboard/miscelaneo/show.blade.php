@@ -25,7 +25,7 @@
     <br> <br>
 
    
-    
+    <div class="container  justify-content-center">
     <form action="{{route('miscelaneo.store')}}" method="post">
     @csrf
       
@@ -64,7 +64,7 @@
                 @enderror 
 
                 <label class="sub" ><b>Imagen:</b></label><br>
-                <input type="file" name="imagen" value ="{{$miscelaneo->imagen}}"><br>
+                <img src="/Assets/Image/{{$miscelaneo->imagen}}" width="25%">
                 @error('imagen')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 
@@ -74,6 +74,8 @@
         </div>
 
     </form>    
+    </div>
+    <br><br>    
       
 </body>
 </html>

@@ -19,16 +19,17 @@
 </head>
 <body class="fondo">
 
-
-    @include('dashboard.partials.nav-header-main')
-    <h1 class="titulo">Medicamentos</h1>
-    <br> <br>
-
-   
+    <header>
+        @include('dashboard.partials.nav-header-main')
+        <h1 class="titulo">Medicamentos</h1>
+        <br> <br>
+    </header>
     
-    <form action="{{route('medicamento.store')}}" method="post">
+    <main>
+    <div class="container" >
+    <form action="{{route('medicamento.store')}}" method="post" >
     @csrf
-        <div class="row">
+        <div class="row" >
 
             <div class="col">
                 <label class="sub" ><b>Nombre:</b></label><br>
@@ -62,7 +63,7 @@
                 @enderror 
 
                 <label class="sub" ><b>Imagen:</b></label><br>
-                <input readonly type="file" name="imagen" value="{{$medicamento->imagen}}"><br>
+                <img src="/Assets/Image/{{$medicamento->imagen}}" width="25%">
                 @error('imagen')
                     <small class="text-danger">{{$message}}</small>
                 @enderror 
@@ -73,7 +74,12 @@
 
         </div>
 
-    </form>    
+    </form>  
+    </div>
+    </main>
+   
+    
+      <br><br>
       
 </body>
 </html>

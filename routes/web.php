@@ -6,6 +6,7 @@ use App\Http\Controllers\Dashboard\MedicamentoController;
 use App\Http\Controllers\Dashboard\MiscelaneoController;
 use App\Http\Controllers\Dashboard\ClienteMediController;
 use App\Http\Controllers\Dashboard\ClienteMisceController;
+use App\Http\Controllers\Dashboard\MedicontroladoController;
 use App\Http\Controllers\Dashboard\UsuarioController;
 
 /*
@@ -30,7 +31,7 @@ Route::resource('miscelaneo', MiscelaneoController::class);
 Route::resource('usuario', UsuarioController::class);
 Route::resource('climedi', ClienteMediController::class);
 Route::resource('climisce', ClienteMisceController::class);
-
+Route::resource('medicontrolado', MedicontroladoController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreMedicontroladoPost;
 use App\Models\medicontro;
 use Illuminate\Http\Request;
 
-class medicontrolado extends Controller
+class MedicontroladoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,6 +27,7 @@ class medicontrolado extends Controller
     public function create()
     {
         //
+        echo view ('dashboard.medicontrolado.create',["medicontrolado"=> new medicontrolado()]);
     }
 
     /**
@@ -36,7 +38,8 @@ class medicontrolado extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Medicontrolado::create($request->validated());
+        return back()->with('status','Muchas gracias, Medicamento creado exitosamente');
     }
 
     /**

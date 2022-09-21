@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('miscelaneos', function (Blueprint $table) {
+        Schema::create('medicontrolados', function (Blueprint $table) {
             $table->id();
             $table->string("nombre",255);
             $table->text("descripcion",255);
-            $table->string("tipo",255);
-            $table->string("marca",255);
-            $table->float("precio");
+            $table->string("laboratorio",255);
+            $table->string("presentacion",255);
+            $table->float("precio_unidad");
             $table->integer("Existencia");
+            $table->string("receta_medica",255);
             $table->string("imagen");
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('miscalaneo');
+        Schema::dropIfExists('medicontrolados');
     }
 };

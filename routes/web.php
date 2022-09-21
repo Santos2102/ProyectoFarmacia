@@ -20,17 +20,6 @@ use App\Http\Controllers\Dashboard\UsuarioController;
 */
 
 Route::get('/', function () {
-
-    /* $user=Auth::user();
-
-    if($user->esAdmin()){
-        echo "Eres admin";
-    }else{
-        echo "Eres cliente";
-    } */
-
-    /*Aqui es donde se retornan las vistas para el administrador y los clientes*/
-
     return view('welcome');
 })->name('home');
 

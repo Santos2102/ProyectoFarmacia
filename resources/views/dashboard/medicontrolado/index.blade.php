@@ -88,7 +88,7 @@
                                 {{$medicontrolado->Existencia}}
                             </td>
                             <td>
-                                <img src="Assets/Image/{{$medicamento->imagen}}" width="150">
+                                <img src="Assets/Image/{{$medicontrolado->imagen}}" width="150">
                             </td>
                             <td>
                                 {{$medicontrolado->created_at->format('d-m-Y')}}

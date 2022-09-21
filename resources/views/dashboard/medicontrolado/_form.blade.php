@@ -43,7 +43,15 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <label class="sub" ><b>Existencia:</b></label><br>
                         <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Existencia " aria-label="Disabled input example"  rows="1" type="text" name="Existencia" value ="{{old('Existencia',$medicontrolado->Existencia)}}"><br>
-                        @error('precio_unidad')
+                        @error('Existencia')
+                            <small class="text-danger">{{$message}}</small>
+                        @enderror 
+                    </div> 
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <label class="sub" ><b>Receta Medica:</b></label><br>
+                        <input class="fo" id="exampleFormControlTextarea1" placeholder="Ingrese Receta Medica" aria-label="Disabled input example"  rows="1" type="text" name="receta_medica" value ="{{old('precio_unidad',$medicontrolado->receta_medica)}}"><br>
+                        @error('receta_medica')
                             <small class="text-danger">{{$message}}</small>
                         @enderror 
                     </div> 

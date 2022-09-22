@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMedicamentoPost;
-use App\Models\CliMedi;
+use App\Models\Medicamento;
 use Illuminate\Http\Request;
 
 class ClienteMediController extends Controller
@@ -17,7 +17,9 @@ class ClienteMediController extends Controller
     public function index()
     {
         //
-        echo view('dashboard.medicamento.cliente');
+        //echo view('dashboard.medicamento.cliente');
+        $medicamento=Medicamento::orderBy('created_at','asc') -> cursorpaginate(5);
+        echo view('dashboard.medicamento.cliente',['medicamento'=>$medicamento]);
     }
 
     /**
@@ -44,21 +46,22 @@ class ClienteMediController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CliMedi  $cliMedi
+     * @param  \App\Models\Medicamento  $cliMedi
      * @return \Illuminate\Http\Response
      */
-    public function show(CliMedi $cliMedi)
+    public function show(Medicamento $medicamento)
     {
         //
+        echo view ('dashboard.medicamento.show', ["medicamento" =>$medicamento]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CliMedi  $cliMedi
+     * @param  \App\Models\Medicamento  $cliMedi
      * @return \Illuminate\Http\Response
      */
-    public function edit(CliMedi $cliMedi)
+    public function edit(Medicamento $medicamento)
     {
         //
     }
@@ -70,7 +73,7 @@ class ClienteMediController extends Controller
      * @param  \App\Models\CliMedi  $cliMedi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CliMedi $cliMedi)
+    public function update(StoreMedicamentoPost $request, Medicamento $medicamento)
     {
         //
     }
@@ -78,10 +81,10 @@ class ClienteMediController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CliMedi  $cliMedi
+     * @param  \App\Models\Medicamento  $cliMedi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CliMedi $cliMedi)
+    public function destroy(Medicamento $medicamento)
     {
         //
     }

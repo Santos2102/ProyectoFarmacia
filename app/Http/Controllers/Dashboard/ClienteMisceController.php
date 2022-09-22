@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Models\CliMisce;
+use App\Models\Miscelaneo;
 use Illuminate\Http\Request;
 
 class ClienteMisceController extends Controller
@@ -16,7 +16,8 @@ class ClienteMisceController extends Controller
     public function index()
     {
         //
-        echo view('dashboard.miscelaneo.cliente');
+        $miscelaneo=Miscelaneo::orderBy('created_at','asc') -> cursorpaginate(5);
+        echo view('dashboard.miscelaneo.cliente',['miscelaneo'=>$miscelaneo]);
     }
 
     /**
@@ -46,18 +47,19 @@ class ClienteMisceController extends Controller
      * @param  \App\Models\CliMisce  $cliMisce
      * @return \Illuminate\Http\Response
      */
-    public function show(CliMisce $cliMisce)
+    public function show(Miscelaneo $miscelaneo)
     {
         //
+        echo view ('dashboard.miscelaneo.show', ["miscelaneo" =>$miscelaneo]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CliMisce  $cliMisce
+     * @param  \App\Models\Miscelaneo  $cliMisce
      * @return \Illuminate\Http\Response
      */
-    public function edit(CliMisce $cliMisce)
+    public function edit(Miscelaneo $miscelaneo)
     {
         //
     }
@@ -69,7 +71,7 @@ class ClienteMisceController extends Controller
      * @param  \App\Models\CliMisce  $cliMisce
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CliMisce $cliMisce)
+    public function update(Request $request, Miscelaneo $miscelaneo)
     {
         //
     }
@@ -77,10 +79,10 @@ class ClienteMisceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CliMisce  $cliMisce
+     * @param  \App\Models\Miscelaneo $cliMisce
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CliMisce $cliMisce)
+    public function destroy(Miscelaneo $miscelaneo)
     {
         //
     }

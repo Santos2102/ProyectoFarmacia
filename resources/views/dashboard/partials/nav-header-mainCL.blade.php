@@ -14,6 +14,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href={{route('climedi.index')}}>Medicamentos</a></li>
+              <li><a class="dropdown-item" href={{route('medicontro.index')}}>Medicamentos Controlados</a></li>
               <li><a class="dropdown-item" href={{route('climisce.index')}}>Miscelaneos</a></li>
             </ul>
            </li>

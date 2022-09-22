@@ -47,7 +47,9 @@
                             <td>
                                 Imagen
                             </td>
-                           
+                            <td>
+                                Acciones
+                            </td>                               
                         </tr>
                     </tbody>
                     @foreach($miscelaneo as $miscelaneo)
@@ -75,7 +77,6 @@
                             </td>
 
                             <td>
-
                                 <a href="{{route('miscelaneo.show',$miscelaneo->id)}}" class="btn btn-success">Ver</a>
                             </td>
 

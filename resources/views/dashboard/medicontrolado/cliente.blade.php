@@ -15,8 +15,8 @@
 </head>
 <body style="background-image: url('/Assets/Image/fondo.jpg');background-attachment: fixed;">
     <header >
-        @include('dashboard.partials.nav-header-main')
-        <a class="btn btn-primary" href="{{route('medicontrolado.create')}}">Crear</a>
+        @include('dashboard.partials.nav-header-mainCL')
+        <h1 class="titulo">Ordena Ya!</h1>
     </header>    
 
     <main>
@@ -25,9 +25,6 @@
                 <thead>
                 <tbody>
                         <tr>
-                            <td>
-                                ID
-                            </td>
                             <td>
                                 Nombre
                             </td>
@@ -47,16 +44,7 @@
                                 Existencia
                             </td>
                             <td>
-                                Receta Medica
-                            </td>
-                            <td>
                                 Imagen
-                            </td>
-                            <td>
-                                Creacion
-                            </td>
-                            <td>
-                                Actualizado
                             </td>
                             <td>
                                 Acciones
@@ -66,9 +54,6 @@
 
                     @foreach($medicontrolado as $medicontrolado)
                         <tr>
-                            <td>
-                                {{$medicontrolado->id}}
-                            </td>
                             <td>
                                 {{$medicontrolado->nombre}}
                             </td>
@@ -88,26 +73,11 @@
                                 {{$medicontrolado->Existencia}}
                             </td>
                             <td>
-                                {{$medicontrolado->receta_medica}}
-                            </td>
-                            <td>
                                 <img src="Assets/Image/{{$medicontrolado->imagen}}" width="150">
-                            </td>
-                            <td>
-                                {{$medicontrolado->created_at->format('d-m-Y')}}
-                            </td>
-                            <td>
-                                {{$medicontrolado->updated_at->format('d-m-Y')}}
                             </td>
 
                             <td>
                                 <a href="{{route('medicontrolado.show',$medicontrolado->id)}}" class="btn btn-success">Ver</a>
-                                <a href="{{route('medicontrolado.edit',$medicontrolado->id)}}" class="btn btn-warning">Editar</a>
-                                <form method="post" action="{{route('medicontrolado.destroy',$medicontrolado->id)}}">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button class="btn btn-danger" type="submit">Borrar</button>
-                                </form>
                             </td>
 
                         </tr>

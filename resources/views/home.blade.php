@@ -22,8 +22,7 @@
 <body class="fondo">
 
 <header>
-@include('dashboard.partials.nav-header-main')
-
+@include('dashboard.partials.nav-header-mainCL')
 
 </header>
 

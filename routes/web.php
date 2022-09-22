@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\MiscelaneoController;
 use App\Http\Controllers\Dashboard\ClienteMediController;
 use App\Http\Controllers\Dashboard\ClienteMisceController;
 use App\Http\Controllers\Dashboard\MedicontroladoController;
+use App\Http\Controllers\Dashboard\MedicontroController;
 use App\Http\Controllers\Dashboard\UsuarioController;
 
 /*
@@ -32,6 +33,7 @@ Route::resource('usuario', UsuarioController::class);
 Route::resource('climedi', ClienteMediController::class);
 Route::resource('climisce', ClienteMisceController::class);
 Route::resource('medicontrolado', MedicontroladoController::class);
+Route::resource('medicontro', MedicontroController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -45,11 +47,11 @@ Route::post('login', function(){
     {
         if($temporal=="Pepian"){
             request()->session()->regenerate();
-            return redirect('/home');
+            return redirect('/medicamento');
         }
         else if($temporal=="Pizza"){
             request()->session()->regenerate();
-            return redirect('/medicamento');
+            return redirect('/home');
         }
         else if($temporal=="Farmacos"){
             request()->session()->regenerate();

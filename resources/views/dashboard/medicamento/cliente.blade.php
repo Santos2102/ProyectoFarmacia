@@ -47,7 +47,9 @@
                             <td>
                                 Imagen
                             </td>
-                          
+                            <td>
+                                Acciones
+                            </td>
                         </tr>
                     </tbody>
                     @foreach($medicamento as $medicamento)

@@ -19,7 +19,7 @@
 </head>
 <body class="fondo">
     <header>
-    @include('dashboard.partials.nav-header-main')
+    @include('dashboard.partials.nav-header-mainAD')
 
 
     <h1 class="titulo">Ingreso de Miscelaneos</h1>

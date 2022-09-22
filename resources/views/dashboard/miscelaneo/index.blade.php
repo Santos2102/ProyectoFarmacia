@@ -15,7 +15,7 @@
 </head>
 <body style="background-image: url('/Assets/Image/fondo.jpg');background-attachment: fixed;">
     <header >
-        @include('dashboard.partials.nav-header-main')
+        @include('dashboard.partials.nav-header-mainAD')
         <a class="btn btn-primary" href="{{route('miscelaneo.create')}}">Crear</a>
     </header>    
 

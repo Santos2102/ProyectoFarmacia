@@ -15,7 +15,7 @@
 </head>
 <body style="background-image: url('/Assets/Image/fondo.jpg');background-attachment: fixed;">
     <header >
-        @include('dashboard.partials.nav-header-main')
+        @include('dashboard.partials.nav-header-mainCL')
        <h1 class="titulo"> Ordena Ya!</h1>
     </header>    
 

@@ -35,3 +35,25 @@ Route::resource('medicontrolado', MedicontroladoController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('login', function(){
+    $credentials = request()->only('email','password');
+    $temporal = Arr::get($credentials,'password');
+    echo $temporal;
+
+    if(Auth::attempt($credentials))
+    {
+        if($temporal=="Pepian"){
+            request()->session()->regenerate();
+            return redirect('/home');
+        }
+        else if($temporal=="Pizza"){
+            request()->session()->regenerate();
+            return redirect('/medicamento');
+        }
+        else if($temporal=="Farmacos"){
+            request()->session()->regenerate();
+            return redirect('/medicontrolado');
+        }
+    }
+});
